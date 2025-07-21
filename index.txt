@@ -1,0 +1,800 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth AI Academy - Land Your Dream AI Job in 30 Days</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 0;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: #667eea;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #667eea;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            text-align: center;
+            padding: 150px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><polygon fill="%23ffffff08" points="0,0 1000,300 1000,1000 0,700"/></svg>');
+            background-size: cover;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 3rem;
+        }
+
+        .btn {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #ff6b6b;
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+        }
+
+        .btn-primary:hover {
+            background: #ff5252;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+        }
+
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.2);
+            color: white;
+            border: 2px solid white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #667eea;
+            transform: translateY(-2px);
+        }
+
+        .trust-markers {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Main Content */
+        .main-content {
+            background: white;
+            padding: 80px 0;
+        }
+
+        .section {
+            margin-bottom: 80px;
+        }
+
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #333;
+        }
+
+        /* Programs Section */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .program-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .program-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .program-card ul {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .program-card li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .program-card li:before {
+            content: "✅ ";
+            color: #4caf50;
+        }
+
+        /* How It Works */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .step {
+            text-align: center;
+            padding: 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border-radius: 15px;
+            position: relative;
+        }
+
+        .step-number {
+            font-size: 3rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+            opacity: 0.8;
+        }
+
+        .step h3 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Success Stories */
+        .success-stories {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 2rem;
+        }
+
+        .success-card {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .success-card h4 {
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+        }
+
+        .success-card blockquote {
+            font-style: italic;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        /* Webinar Section */
+        .webinar {
+            background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+            margin: 3rem 0;
+        }
+
+        .webinar h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .webinar-details {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+            flex-wrap: wrap;
+        }
+
+        .webinar-detail {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 1rem 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Target Audience */
+        .target-audience {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .audience-card {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .audience-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .audience-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: #f8f9fa;
+            margin-bottom: 1rem;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            background: #667eea;
+            color: white;
+            padding: 1.5rem;
+            cursor: pointer;
+            font-weight: bold;
+            user-select: none;
+        }
+
+        .faq-answer {
+            padding: 1.5rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* About Founder */
+        .founder-section {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            padding: 3rem;
+            border-radius: 20px;
+            text-align: center;
+        }
+
+        .founder-bio {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .founder-bio h3 {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .founder-bio p {
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            color: #555;
+        }
+
+        .achievements {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .achievement {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 1rem;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+
+        /* Call to Action */
+        .final-cta {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            color: white;
+            margin-bottom: 2rem;
+        }
+
+        .cta-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .cta-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+
+        /* Footer */
+        footer {
+            background: #333;
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #667eea;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .trust-markers {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .section h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-in {
+            animation: fadeInUp 0.8s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="container">
+            <div class="logo">🧠 Growth AI Academy</div>
+            <ul class="nav-links">
+                <li><a href="#programs">Programs</a></li>
+                <li><a href="#success-stories">Success Stories</a></li>
+                <li><a href="#webinar">Webinar</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="animate-in">Land Your Dream AI Job in 30 Days — No Tech Background Needed</h1>
+                <p class="animate-in">Upskill with India's most practical AI & Data Academy built for Doctors, Graduates, and Career Switchers.</p>
+                
+                <div class="cta-buttons animate-in">
+                    <a href="https://forms.gle/your_form_link_here" target="_blank" class="btn btn-primary">🎯 AI Career Roadmap Call – Apply Now</a>
+                    <a href="#webinar" class="btn btn-secondary">📅 Join Upcoming Webinar</a>
+                </div>
+
+                <div class="trust-markers animate-in">
+                    <span>✅ Trusted by 800+ Students</span>
+                    <span>💬 4.9⭐ Google Reviews</span>
+                    <span>🎯 90% Completion Rate</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <main class="main-content">
+        <div class="container">
+            <section id="programs" class="section">
+                <h2>📚 Programs We Offer</h2>
+                <div class="programs-grid">
+                    <div class="program-card">
+                        <h3>🔹 Data Analytics Foundation (1 Month)</h3>
+                        <ul>
+                            <li>Learn Excel, Power BI, Python basics</li>
+                            <li>Real-world projects + resume help</li>
+                            <li>Industry-ready portfolio</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <h3>🔹 AI for Healthcare & Non-Tech Professionals</h3>
+                        <ul>
+                            <li>No-code AI tools + fundamentals</li>
+                            <li>Apply AI in your current field</li>
+                            <li>Practical implementation strategies</li>
+                        </ul>
+                    </div>
+                    <div class="program-card">
+                        <h3>🔹 Job-Focused Bootcamp</h3>
+                        <ul>
+                            <li>Mock interviews</li>
+                            <li>Portfolio + LinkedIn optimization</li>
+                            <li>Direct placement support</li>
+                        </ul>
+                    </div>
+                </div>
+                <div style="text-align: center;">
+                    <a href="#contact" class="btn btn-primary">📋 View Full Curriculum</a>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🎯 How It Works</h2>
+                <div class="steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <h3>Attend Free Live Webinar</h3>
+                        <p>Learn the roadmap to AI careers</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <h3>Book Your Career Roadmap Call</h3>
+                        <p>Get personalized guidance</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <h3>Join Growth AI Academy</h3>
+                        <p>Start your transformation journey</p>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <h3>Build Your AI Career in 90 Days</h3>
+                        <p>Land your dream job or freelance role</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="success-stories" class="section">
+                <h2>🌟 Success Stories</h2>
+                <div class="success-stories">
+                    <div class="success-card">
+                        <h4>🚀 Priya, Doctor → Freelance AI Analyst in 6 weeks</h4>
+                        <blockquote>"This program changed my life. I never thought I'd understand AI without coding."</blockquote>
+                    </div>
+                    <div class="success-card">
+                        <h4>💼 Manoj, Engineer → BI Analyst at Top MNC</h4>
+                        <blockquote>"Resume reviews, mock interviews, and real guidance. Worth every minute."</blockquote>
+                    </div>
+                </div>
+                <div style="text-align: center; margin-top: 2rem;">
+                    <a href="#contact" class="btn btn-primary">📖 View More Success Stories</a>
+                </div>
+            </section>
+
+
+<section id="webinar" class="section">
+    <div class="webinar" style="background: linear-gradient(135deg, #8B0000 0%, #2C003E 100%);">
+        <h3>🗓️ Next Free Webinar</h3>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Topic: "How to Land a Job in AI Without Coding"</p>
+        <div class="webinar-details">
+            <div class="webinar-detail">
+                <strong>📅 Date: July 27</strong>
+            </div>
+            <div class="webinar-detail">
+                <strong>🕑 Time: 7:00 PM IST</strong>
+            </div>
+        </div>
+        <a href="#contact" class="btn btn-primary">🎟️ Reserve My Free Seat</a>
+    </div>
+</section>
+
+            
+
+
+            <section class="section">
+                <h2>👥 Who This Is For</h2>
+                <div class="target-audience">
+                    <div class="audience-card">
+                        <div class="audience-icon">👩‍⚕️</div>
+                        <h4>Doctors</h4>
+                        <p>Looking to shift to digital roles</p>
+                    </div>
+                    <div class="audience-card">
+                        <div class="audience-icon">👨‍🎓</div>
+                        <h4>Graduates</h4>
+                        <p>With no clear direction</p>
+                    </div>
+                    <div class="audience-card">
+                        <div class="audience-icon">🧑‍💼</div>
+                        <h4>Career Switchers</h4>
+                        <p>From any background</p>
+                    </div>
+                    <div class="audience-card">
+                        <div class="audience-icon">👩‍💻</div>
+                        <h4>Freelancers</h4>
+                        <p>Stuck in low-paying work</p>
+                    </div>
+                </div>
+            </section>
+
+            <section class="section">
+                <h2>🧾 Frequently Asked Questions</h2>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Q: Do I need to know coding?
+                    </div>
+                    <div class="faq-answer">
+                        A: No, our foundation batch is designed for complete beginners. We start from the basics and build up your skills progressively.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Q: Will I get a job after this?
+                    </div>
+                    <div class="faq-answer">
+                        A: If you complete your projects and take part in calls, you'll be ready for freelance or full-time roles. We provide placement support and interview preparation.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFAQ(this)">
+                        Q: How is this different from YouTube videos?
+                    </div>
+                    <div class="faq-answer">
+                        A: Live mentoring, real project reviews, job-based outcomes, and personalized guidance. You get direct access to instructors and a structured learning path.
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="section">
+                <div class="founder-section">
+                    <div class="founder-bio">
+                        <h3>👩‍🏫 About the Founder – Dr. Kariena David</h3>
+                        <p>From a dentist to an AI & Healthcare Consultant, Kariena built Growth AI Academy to help professionals pivot into AI, Data, and Tech with <strong>no prior experience</strong>.</p>
+                        <div class="achievements">
+                            <div class="achievement">🏆 20+ awards in healthcare and tech</div>
+                            <div class="achievement">🎙 Host of "Beyond the White Coat" webinar series</div>
+                            <div class="achievement">🧠 Helped 500+ professionals transition to tech</div>
+                        </div>
+                        <div style="margin-top: 2rem;">
+                            <a href="#contact" class="btn btn-primary">📖 Learn More About Kariena</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <section id="contact" class="final-cta">
+        <div class="container">
+            <h2>💬 Ready to Transform Your Career?</h2>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Choose your next step and start your AI journey today</p>
+            
+            <div class="cta-grid">
+                <div class="cta-card">
+                    <h3>📩 Join the Next Webinar</h3>
+                    <p>Perfect for beginners who want to learn the basics</p>
+		    <a href="https://docs.google.com/forms/d/13JUUaUCq2mI3zY0K9Dv2WDzMU9IJ_2g8giy4gs5ZP5k/edit" target="_blank" class="btn btn-primary">🎟️ Reserve Seat</a>
+            
+               </div>
+                <div class="cta-card">
+                    <h3>📞 Free 1:1 AI Career Roadmap Call</h3>
+                    <p>Get personalized guidance for your situation</p>
+                    <a href="mailto:info@growthaiacademy.com?subject=Career Roadmap Call" class="btn btn-primary" style="margin-top: 1rem;">📋 Apply Now</a>
+                </div>
+                <div class="cta-card">
+                    <h3>💬 WhatsApp Support</h3>
+                    <p>Quick questions? Chat with our team directly</p>
+                    <a href="https://wa.me/91956616193" class="btn btn-primary" style="margin-top: 1rem;">💬 Chat Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="#terms">Terms & Conditions</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#refund">Refund Policy</a>
+                <a href="mailto:info@growthaiacademy.com">Contact Us</a>
+            </div>
+            <p>&copy; 2024 Growth AI Academy. All rights reserved.</p>
+            <p style="margin-top: 1rem; opacity: 0.8;">Empowering professionals to build successful AI careers since 2023</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Toggle Functionality
+        function toggleFAQ(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Toggle current item
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
+
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('.section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Header background change on scroll
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 100) {
+                header.style.background = 'rgba(255, 255, 255, 0.98)';
+            } else {
+                header.style.background = 'rgba(255, 255, 255, 0.95)';
+            }
+        });
+    </script>
+</body>
+</html>

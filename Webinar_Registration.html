@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>📅 Webinar Registration - Growth AI Academy</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .form-container {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            animation: slideUp 0.6s ease-out;
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .form-header {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .form-header h1 {
+            color: #333;
+            font-size: 2.2rem;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .form-header p {
+            color: #666;
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+        }
+
+        .webinar-info {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .urgency-banner {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ff8e8e 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+
+        .benefits-list {
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+
+        .benefits-list h4 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .benefits-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .benefits-list li {
+            padding: 0.5rem 0;
+            color: #555;
+            font-size: 0.95rem;
+        }
+
+        .benefits-list li:before {
+            content: "✨ ";
+            color: #4caf50;
+            font-weight: bold;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: #333;
+            font-weight: 500;
+        }
+
+        .required {
+            color: #ff6b6b;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 80px;
+        }
+
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: auto;
+            margin-top: 0.2rem;
+        }
+
+        .checkbox-group label {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            line-height: 1.4;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 16px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(102, 126, 234, 0.3);
+        }
+
+        .submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .success-message {
+            background: linear-gradient(135deg, #4caf50 0%, #66bb6a 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-top: 1rem;
+            text-align: center;
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .error-message {
+            background: #ffebee;
+            color: #c62828;
+            padding: 1rem;
+            border-radius: 8px;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        @media (max-width: 768px) {
+            .form-container {
+                padding: 2rem 1.5rem;
+            }
+            
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+            
+            .form-header h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <div class="form-header">
+                <h1>📅 Webinar Registration</h1>
+                <p>"How to Land a Job in AI Without Coding"</p>
+                <div class="webinar-info">
+                    <strong>📅 July 27, 2024 | 🕰️ 7:00 PM IST</strong>
+                    <br>
+                    <small>Duration: 90 minutes + Live Q&A</small>
+                </div>
+            </div>
+
+            <div class="urgency-banner">
+                <strong>⏰ Limited Seats Available!</strong> Only 100 spots left for this exclusive webinar
+            </div>
+
+            <div class="benefits-list">
+                <h4>What You'll Learn:</h4>
+                <ul>
+                    <li>5 High-Paying AI Roles That Don't Require Coding</li>
+                    <li>Step-by-Step Roadmap to Break Into AI</li>
+                    <li>Real Success Stories from Our Alumni</li>
+                    <li>Live Q&A with Dr. Kariena David</li>
+                    <li>Exclusive Course Discounts for Attendees</li>
+                </ul>
+            </div>
+
+            <form id="webinar-registration" onsubmit="handleSubmit(event)">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="name">Full Name <span class="required">*</span></label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="phone">Phone Number <span class="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profession">Current Profession</label>
+                        <select id="profession" name="profession">
+                            <option value="">Select your profession</option>
+                            <option value="doctor">Doctor</option>
+                            <option value="engineer">Engineer</option>
+                            <option value="graduate">Fresh Graduate</option>
+                            <option value="business">Business Professional</option>
+                            <option value="freelancer">Freelancer</option>
+                            <option value="student">Student</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="experience">Experience with AI/Data (Optional)</label>
+                    <select id="experience" name="experience">
+                        <option value="">Select your experience level</option>
+                        <option value="complete-beginner">Complete Beginner</option>
+                        <option value="some-knowledge">Some Knowledge</option>
+                        <option value="intermediate">Intermediate</option>
+                        <option value="advanced">Advanced</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="goals">What's your main goal? (Optional)</label>
+                    <textarea id="goals" name="goals" placeholder="e.g., Career switch, skill upgrade, freelancing, etc."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="updates" name="updates" value="yes">
+                        <label for="updates">I want to receive updates about upcoming programs and career opportunities</label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="terms" name="terms" required>
+                        <label for="terms">I agree to the <a href="#" style="color: #667eea;">Terms & Conditions</a> and <a href="#" style="color: #667eea;">Privacy Policy</a> <span class="required">*</span></label>
+                    </div>
+                </div>
+
+                <button type="submit" class="submit-btn">🎟️ Reserve My Free Seat</button>
+                
+                <div class="success-message" id="success-message">
+                    <h3>✅ Registration Successful!</h3>
+                    <p>Check your email for webinar details and calendar invite. We'll send you a reminder 1 hour before the session.</p>
+                </div>
+                
+                <div class="error-message" id="error-message">
+                    <strong>⚠️ Registration Failed</strong>
+                    <p>Please check your internet connection and try again. If the problem persists, contact our support team.</p>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function handleSubmit(event) {
+            event.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(event.target);
+            const data = Object.fromEntries(formData.entries());
+            
+            // Validate required fields
+            const requiredFields = ['name', 'email', 'phone', 'terms'];
+            const errors = [];
+            
+            requiredFields.forEach(field => {
+                if (!data[field]) {
+                    errors.push(field);
+                }
+            });
+            
+            if (errors.length > 0) {
+                alert('Please fill in all required fields.');
+                return;
+            }
+            
+
+            
+console.log('Webinar Registration Data:', data);
+
+const scriptURL = 'https://script.google.com/macros/s/1jW3vEtiZerJJPNb2szW1NDYr_4_y0XAQdwM4YDYDqroNYK6dsKD_wr_q/exec';
+const submitBtn = event.target.querySelector('.submit-btn');
+const originalText = submitBtn.textContent;
+
+const formData = new FormData(event.target);
+
+fetch(scriptURL, {
+    method: 'POST',
+    body: formData
+})
+
+
+.then(response => response.json())
+.then(result => {
+    if (result.result === "success") {
+        event.target.style.display = 'none';
+        document.getElementById('success-message').style.display = 'block';
+        document.getElementById('success-message').scrollIntoView({ behavior: 'smooth' });
+    } else {
+        document.getElementById('error-message').style.display = 'block';
+    }
+})
+.catch(error => {
+    console.error('Error!', error.message);
+    document.getElementById('error-message').style.display = 'block';
+})
+.finally(() => {
+    submitBtn.textContent = originalText;
+    submitBtn.disabled = false;
+});
+
+        }
+
+        // Form validation
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.getElementById('webinar-registration');
+            const inputs = form.querySelectorAll('input, select, textarea');
+            
+            inputs.forEach(input => {
+                input.addEventListener('blur', function() {
+                    if (this.hasAttribute('required') && !this.value.trim()) {
+                        this.style.borderColor = '#ff6b6b';
+                    } else {
+                        this.style.borderColor = '#e0e0e0';
+                    }
+                });
+                
+                input.addEventListener('input', function() {
+                    if (this.style.borderColor === 'rgb(255, 107, 107)') {
+                        this.style.borderColor = '#e0e0e0';
+                    }
+                });
+            });
+            
+            // Email validation
+            const emailInput = document.getElementById('email');
+            emailInput.addEventListener('input', function() {
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (this.value && !emailRegex.test(this.value)) {
+                    this.style.borderColor = '#ff6b6b';
+                } else {
+                    this.style.borderColor = '#e0e0e0';
+                }
+            });
+            
+            // Phone validation
+            const phoneInput = document.getElementById('phone');
+            phoneInput.addEventListener('input', function() {
+                const phoneRegex = /^[+]?[\d\s\-\(\)]+$/;
+                if (this.value && !phoneRegex.test(this.value)) {
+                    this.style.borderColor = '#ff6b6b';
+                } else {
+                    this.style.borderColor = '#e0e0e0';
+                }
+            });
+        });
+    </script>
+</body>
+</html>
