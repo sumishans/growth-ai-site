@@ -1,0 +1,990 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="description" content="Growth.AI Academy - Master Data Analytics and AI without coding. Join 2000+ students. Job-ready programs with real projects.">
+<meta name="keywords" content="AI course, data analytics, no coding, job-ready, Growth AI, data career, India AI bootcamp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Growth.ai - Data Analytics & AI Programs</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #1a1a2e;
+            background: #000;
+            overflow-x: hidden;
+        }
+
+        .brochure {
+            max-width: 100%;
+            background: linear-gradient(135deg, #0f0f23 0%, #16213e 100%);
+            color: white;
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 60px 20px;
+            background: 
+                radial-gradient(circle at 20% 80%, rgba(29, 78, 255, 0.3) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 29, 132, 0.3) 0%, transparent 50%),
+                linear-gradient(135deg, #0f0f23 0%, #16213e 100%);
+            position: relative;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="25" r="0.5" fill="rgba(255,255,255,0.1)"/><circle cx="25" cy="75" r="0.8" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1.2" fill="rgba(255,255,255,0.1)"/></svg>') repeat;
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-badge {
+            background: linear-gradient(45deg, #1d4eff, #ff1d84);
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 30px;
+            display: inline-block;
+        }
+
+        .hero-title {
+            font-size: clamp(3rem, 8vw, 6rem);
+            font-weight: 900;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, #fff 0%, #1d4eff 50%, #ff1d84 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+
+        .hero-subtitle {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            margin-bottom: 40px;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 60px;
+            margin: 60px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 4rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #1d4eff, #ff1d84);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            opacity: 0.8;
+            margin-top: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* AI Revolution Section */
+        .ai-revolution {
+            padding: 100px 20px;
+            background: linear-gradient(45deg, rgba(29, 78, 255, 0.1), rgba(255, 29, 132, 0.1));
+            text-align: center;
+        }
+
+        .ai-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin: 60px 0;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .ai-stat-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .ai-stat-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(29, 78, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(29, 78, 255, 0.2);
+        }
+
+        .ai-stat-number {
+            font-size: 3rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #1d4eff, #ff1d84);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .ai-stat-label {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 100px 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 800;
+            text-align: center;
+            margin-bottom: 60px;
+            background: linear-gradient(135deg, #fff 0%, #1d4eff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* About Academy Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .about-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .about-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(29, 78, 255, 0.5);
+            box-shadow: 0 20px 40px rgba(29, 78, 255, 0.2);
+        }
+
+        .about-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color:#ff1d84;
+        }
+
+        .about-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .about-card li {
+            margin: 12px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .about-card li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #ff1d84;
+            font-weight: bold;
+        }
+
+        /* Programs Section */
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .program-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 30px;
+            padding: 40px;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-15px);
+            border-color: rgba(29, 78, 255, 0.8);
+            box-shadow: 0 30px 60px rgba(29, 78, 255, 0.3);
+        }
+
+        .program-badge {
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            background: linear-gradient(45deg, #1d4eff, #ff1d84);
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 0.8rem;
+        }
+
+        .program-title {
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 20px 0 15px 0;
+            color: #ff1d84;
+        }
+
+        .program-duration {
+            font-size: 1.1rem;
+            opacity: 0.8;
+            margin-bottom: 20px;
+        }
+
+        .program-price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            background: linear-gradient(45deg, #1d4eff, #ff1d84);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .price-original {
+            text-decoration: line-through;
+            opacity: 0.6;
+            font-size: 0.6em;
+            margin-left: 15px;
+        }
+
+        .early-bird-price {
+            color: #00ff88;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .program-features {
+            list-style: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        .program-features li {
+            margin: 10px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .program-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #00ff88;
+            font-weight: bold;
+        }
+
+        .program-button {
+            width: 100%;
+            padding: 15px;
+            background: linear-gradient(45deg, #1d4eff, #ff1d84);
+            border: none;
+            border-radius: 15px;
+            color: white;
+            font-size: 1rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+        }
+
+        .program-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(29, 78, 255, 0.4);
+        }
+
+        /* Curriculum Details */
+        .curriculum-details {
+            margin-top: 100px;
+        }
+
+        .curriculum-grid {
+            display: grid;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .week-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .week-card:hover {
+            background: rgba(29, 78, 255, 0.1);
+            border-color: rgba(29, 78, 255, 0.5);
+        }
+
+        .week-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color:#ff1d84;
+            margin-bottom: 15px;
+        }
+
+        .week-topics {
+            list-style: none;
+            padding: 0;
+        }
+
+        .week-topics li {
+            margin: 8px 0;
+            padding-left: 20px;
+            position: relative;
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .week-topics li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #ff1d84;
+            font-weight: bold;
+        }
+
+        /* Early Bird Section */
+        .early-bird {
+            background: linear-gradient(45deg, #ff1d84, #ffa726);
+            padding: 60px 40px;
+            border-radius: 30px;
+            text-align: center;
+            margin: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .early-bird::before {
+            content: '🚀';
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            font-size: 3rem;
+        }
+
+        .early-bird h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        .early-bird .savings {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #000;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px 30px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #1d4eff 0%, #ff1d84 100%);
+            padding: 100px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><polygon points="50,10 90,90 10,90" fill="rgba(255,255,255,0.05)"/></svg>') repeat;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .cta-title {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 900;
+            margin-bottom: 30px;
+            color: white;
+        }
+
+        .cta-subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            opacity: 0.9;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 80px;
+        }
+
+        .cta-button {
+            padding: 20px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .cta-primary {
+            background: white;
+            color: #1d4eff;
+            border-color: white;
+        }
+
+        .cta-primary:hover {
+            background: transparent;
+            color: white;
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 255, 255, 0.3);
+        }
+
+        .cta-secondary {
+            background: transparent;
+            color: white;
+            border-color: white;
+        }
+
+        .cta-secondary:hover {
+            background: white;
+            color: #1d4eff;
+            transform: translateY(-5px);
+        }
+
+        /* Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-top: 60px;
+        }
+
+        .contact-item {
+            text-align: center;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+        }
+
+        .contact-link {
+            color: #00ff88;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .contact-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-stats {
+                gap: 30px;
+            }
+
+            .stat-number {
+                font-size: 3rem;
+            }
+
+            .about-grid, .programs-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ai-stats {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+                gap: 20px;
+            }
+
+            .program-card {
+                padding: 30px 20px;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="brochure">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <div class="hero-content">
+                <div class="hero-badge floating">COMPLETE LEARNING ECOSYSTEM</div>
+                <h1 class="hero-title">GROWTH.AI<br>ACADEMY</h1>
+                <p class="hero-subtitle">Master Data Analytics & Generative AI • Build Your Future-Proof Career</p>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">2</span>
+                        <span class="stat-label">Complete Programs</span>
+                    </div>
+                    <div class="stat-item">
+                          <span class="stat-number">1000+</span>
+                        <span class="stat-label">Students Mentored</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Job Ready</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Revolution Stats -->
+        <section class="ai-revolution">
+            <h2 class="section-title" style="margin-bottom: 40px;">THE AI REVOLUTION IS HERE</h2>
+            <p style="font-size: 1.3rem; opacity: 0.9; max-width: 800px; margin: 0 auto 40px;">
+                AI is reshaping industries, creating new careers and unprecedented opportunities. Don't get left behind!
+            </p>
+            
+            <div class="ai-stats">
+                <div class="ai-stat-card">
+                    <span class="ai-stat-number">$1.3T</span>
+                    <span class="ai-stat-label">AI industry projected by 2032</span>
+                </div>
+                <div class="ai-stat-card">
+                    <span class="ai-stat-number">400%</span>
+                    <span class="ai-stat-label">AI job demand up in two years</span>
+                </div>
+                <div class="ai-stat-card">
+                    <span class="ai-stat-number">$10K+</span>
+                    <span class="ai-stat-label">AI freelancers earn per project</span>
+                </div>
+                <div class="ai-stat-card">
+                    <span class="ai-stat-number">90%</span>
+                    <span class="ai-stat-label">Businesses integrating AI by 2027</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Academy Section -->
+        <section class="section">
+            <h2 class="section-title">ABOUT GROWTH.AI</h2>
+            <div style="text-align: center; margin-bottom: 60px;">
+                <p style="font-size: 1.5rem; font-weight: 300; opacity: 0.9; max-width: 800px; margin: 0 auto;">
+                    "We accelerate growth through AI and data. Learn practical skills that drive real results."
+                </p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card">
+                    <h3>🎯 Why Choose Us</h3>
+                    <ul>
+                        <li>30+ years industry experience</li>
+                        <li>1,000+ students mentored</li>
+                        <li>Hands-on practical learning</li>
+                        <li>Career-focused development</li>
+                        <li>Beginner-friendly approach</li>
+                        <li>No coding required for AI course</li>
+                    </ul>
+                </div>
+                
+                <div class="about-card">
+                    <h3>📚 What We Offer</h3>
+                    <ul>
+                        <li>Data Analytics Foundation</li>
+                        <li>Generative AI & AI Agents</li>
+                        <li>Big Data & Data Science</li>
+                        <li>Growth Hacking Strategies</li>
+                        <li>Interview Preparation</li>
+                        <li>Real-Time Projects</li>
+                    </ul>
+                </div>
+
+                <div class="about-card">
+                    <h3>🚀 Success Outcomes</h3>
+                    <ul>
+                        <li>Portfolio-ready projects</li>
+                        <li>Industry-leading tools mastery</li>
+                        <li>Freelancing opportunities</li>
+                        <li>Career transition support</li>
+                        <li>Lifetime community access</li>
+                        <li>Continuous course updates</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Programs Section -->
+        <section class="section">
+            <h2 class="section-title">OUR COMPLETE PROGRAMS</h2>
+            
+            <div class="programs-grid">
+                <!-- Data Analytics Program -->
+                <div class="program-card">
+                    <div class="program-badge">FOUNDATION</div>
+                    <h3 class="program-title">Data Analytics Foundation</h3>
+                    <p class="program-duration">1 Month • Weekend Batches • 16 Total Hours</p>
+                    <div class="program-price">₹26,000</div>
+                   
+                    
+                    <ul class="program-features">
+                        <li>Mathematics & Statistics Fundamentals</li>
+                        <li>Advanced Excel with data analitics</li>
+                        <li>Power BI & Business Intelligence</li>
+                        <li>Python for Data Analytics</li>
+                        <li>Final Projects & Portfolio Development</li>
+                        <li>Weekend Schedule (Sat & Sun)</li>
+                    </ul>
+                    
+                    <button class="program-button">Enroll Now </button>
+                </div>
+
+                <!-- AI & Agents Program -->
+                <div class="program-card">
+                    <div class="program-badge">ADVANCED</div>
+                    <h3 class="program-title">Generative AI & AI Agents</h3>
+                    <p class="program-duration">1 Month • Weekend Batches • 16 Total Hours • Intensive AI Mastery • No Coding Needed</p>
+                    <div class="program-price">₹30,000</div>
+         
+
+                    
+                    <ul class="program-features">
+                        <li>Large Language Models (LLMs)</li>
+                        <li>Image, Audio, and Video Generation</li>
+                        <li>Speech & Audio AI</li>
+                        <li> No-code AI tools + fundamentals </li>
+                        <li>Multi-Agent Development Systems n8n</li>
+                        <li>25+ AI Tools & Frameworks</li>
+                        <li>Capstone Projects</li>
+                  
+                    </ul>
+                    
+                    <button class="program-button">Enroll Now </button>
+                </div>
+            </div>
+        </section>
+<section class="section">
+  <h2 class="section-title">2-MONTH DATA + AI LEARNING ROADMAP</h2>
+  <p style="text-align: center; font-size: 1.2rem; opacity: 0.9; margin-bottom: 50px;">
+    Become a job-ready Data & AI professional. Build real-world projects, master AI workflows, and monetize your skills.
+  </p>
+
+  <!-- Month 1 -->
+  <div class="curriculum-grid">
+    <div class="week-card">
+      <h4 class="week-title">Month 1: Data Analytics Foundation</h4>
+      <p><strong>Focus:</strong> Core Analytics Skills + Tools</p>
+      <p><strong>Outcome:</strong> Dashboard, Python Project, Resume Portfolio</p>
+    </div>
+
+    <div class="week-card">
+      <h4 class="week-title">Week 1: Intro to Data Analytics & the Business Context</h4>
+      <ul class="week-topics">
+
+    
+	<h3 class="week-title" style="color: #00ff88;">Day 1 (Sat) – Intro to Data Analytics & the Business Context</h3>
+
+
+	<li> What is Data Analytics?</li>
+	<li>Real-world use cases across industries</li>
+	<li>Analytics lifecycle & project flow</li>
+	<li>Introduction to the final project</li>
+
+	<h3  class="week-title"style="color: #00ff88;">Day 2 (Sun) – Math & Statistics Essentials for Analytics</h3>
+
+	<li>Descriptive statistics: mean, median, mode, standard deviation</li>
+	<li>Probability basics, distributions, and correlation</li>
+	<li>Practical use cases in Excel</li>
+      </ul>
+      <p><strong>Tools:</strong> Excel, Sample Data</p>
+    </div>
+
+<div class="week-card">
+  <h4 class="week-title">Week 2: Excel & Business Intelligence</h4>
+  <ul class="week-topics">
+    <h3 class="week-title" style="color: #00ff88;">Day 3 (Sat) – Advanced Excel for Analysts</h3>
+    <li>Pivot tables, VLOOKUP, IF statements</li>
+    <li>Data cleaning & wrangling in Excel</li>
+    <li>Dashboard creation</li>
+
+    <h3 class="week-title" style="color: #00ff88;">Day 4 (Sun) – Power BI & Data Visualization</h3>
+    <li>Power BI interface, data modeling basics</li>
+    <li>Building dashboards with slicers, charts</li>
+    <li>DAX introduction for calculated fields</li>
+  </ul>
+  <p><strong>Tools:</strong> Excel, Power BI</p>
+</div>
+
+
+
+    
+
+   <div class="week-card">
+  <h4 class="week-title">Week 3: Python for Analytics</h4>
+  <ul class="week-topics">
+    <h3 class="week-title" style="color: #00ff88;">Day 5 (Sat) – Python Fundamentals for Analytics</h3>
+    <li>Syntax, variables, loops, and functions</li>
+    <li>Pandas & NumPy for data analysis</li>
+    <li>Reading/writing files, data transformation</li>
+
+    <h3 class="week-title" style="color: #00ff88;">Day 6 (Sun) – Data Analysis with Python</h3>
+    <li>Exploratory Data Analysis (EDA)</li>
+    <li>Visualization with Matplotlib & Seaborn</li>
+    <li>Building insights and reporting</li>
+  </ul>
+  <p><strong>Tools:</strong> Jupyter Notebook, Pandas, NumPy, Matplotlib, Seaborn</p>
+</div>
+
+
+    <div class="week-card">
+  <h4 class="week-title">Week 4: Projects & Portfolio</h4>
+  <ul class="week-topics">
+    <h3 class="week-title" style="color: #00ff88;">Day 7 (Sat) – Final Project – Hands-On Case Study</h3>
+    <li>Choose between business, healthcare, or finance dataset</li>
+    <li>Solve using Excel, Power BI, and Python</li>
+    <li>Build and document a data analytics solution</li>
+
+    <h3 class="week-title" style="color: #00ff88;">Day 8 (Sun) – Portfolio Review & Career Tips</h3>
+    <li>Present project (peer + mentor review)</li>
+    <li>Resume & LinkedIn optimization for data roles</li>
+    <li>Freelancing, internships, or job strategies</li>
+  </ul>
+  <p><strong>Tools:</strong> Excel, Power BI, Python</p>
+</div>
+
+  </div>
+
+  <!-- Month 2 -->
+<div class="week-card">
+  <h4 class="week-title">Month 2: AI for Healthcare & Non-Tech and Tech Professionals</h4>
+  <p><strong>Target Audience:</strong> Doctors, clinical researchers, managers, consultants, domain experts</p>
+  <p><strong>Schedule:</strong> 8 sessions (4 weekends, Sat & Sun)</p>
+</div>
+
+  <div class="curriculum-grid" style="margin-top: 80px;">
+    <div class="week-card">
+  <h4 class="week-title">Week 1: AI Mindset & Use-Case Deep Dive</h4>
+  <ul class="week-topics">
+    <h3 class="week-title" style="color: #00ff88;">Day 1 (Sat) – Generative AI & LLMs for Non-Coders</h3>
+    <li>What is Generative AI?</li>
+    <li>ChatGPT, Claude, Gemini – comparison</li>
+    <li>Prompting 101 for research, reporting, decision-making</li>
+    <li>Use cases in healthcare and non-tech</li>
+
+    <h3 class="week-title" style="color: #00ff88;">Day 2 (Sun) – Large Language Models (LLMs)</h3>
+    <li>How LLMs work (simplified)</li>
+    <li>Real applications in patient communication, note-taking, diagnostics</li>
+    <li>Building your own GPT-style assistant (no code)</li>
+  </ul>
+  <p><strong>Tools:</strong> ChatGPT, Claude, Gemini</p>
+</div>
+
+<div class="week-card">
+  <h4 class="week-title">Week 2: Beyond Text – Multimodal AI</h4>
+  <ul class="week-topics">
+    <h3 class="week-title" style="color: #00ff88;">Day 3 (Sat) – Image, Audio & Video Generation</h3>
+    <li>AI image tools (DALL·E, Midjourney, Canva AI)</li>
+    <li>Voice cloning, AI avatars</li>
+    <li>Ethical boundaries + patient use cases</li>
+
+    <h3 class="week-title" style="color: #00ff88;">Day 4 (Sun) – No-Code AI Tools & Automation</h3>
+    <li>Tools: Pictory, Runway ML, ElevenLabs, Zapier</li>
+    <li>Build a healthcare AI bot or workflow without coding</li>
+    <li>Integrate AI into existing practice or systems</li>
+  </ul>
+  <p><strong>Tools:</strong> DALL·E, Midjourney, Canva AI, Pictory, Runway ML, ElevenLabs, Zapier</p>
+</div>
+
+  <div class="week-card">
+  <h4 class="week-title">Week 3: AI Agent Design & Implementation</h4>
+  <ul class="week-topics">
+    <h3 class="week-title" style="color: #00ff88;">Day 5 (Sat) – AI Agents & Multi-Agent Systems</h3>
+    <li>What are AI agents?</li>
+    <li>Examples: appointment bots, insurance assistants</li>
+    <li>Building a simple AI agent (tools + flowchart)</li>
+
+    <h3 class="week-title" style="color: #00ff88;">Day 6 (Sun) – Tool Mastery: 25+ Frameworks Showcase</h3>
+    <li>Explore: LangChain, AutoGPT, Flowise, Notion AI</li>
+    <li>How to choose the right tool for your domain</li>
+    <li>Create a functional agent prototype</li>
+  </ul>
+  <p><strong>Tools:</strong> LangChain, AutoGPT, Flowise, Notion AI</p>
+</div>
+
+<div class="week-card">
+  <h4 class="week-title">Week 4: Real-World Application & Monetization</h4>
+  <ul class="week-topics">
+    <h3 class="week-title" style="color: #00ff88;">Day 7 (Sat) – Capstone Project – Build Your AI Use Case</h3>
+    <li>Choose a problem from your field (healthcare, HR, legal, marketing)</li>
+    <li>Build + test an AI-enhanced workflow or tool</li>
+    <li>Peer + mentor feedback</li>
+
+    <h3 class="week-title" style="color: #00ff88;">Day 8 (Sun) – Monetization & Career Pathways</h3>
+    <li>Freelancing with AI tools</li>
+    <li>Starting a productized service or AI consulting</li>
+    <li>Case studies of non-tech success stories</li>
+  </ul>
+  <p><strong>Tools:</strong> No-code AI builders, industry-specific tools</p>
+</div>
+
+   
+  
+  </div>
+</section>
+
+
+     
+                    
+                </div>
+
+               
+
+                
+
+               
+            </div>
+        </section>
+
+       
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <div class="cta-content">
+                <h2 class="cta-title">READY TO TRANSFORM<br>YOUR CAREER?</h2>
+                <p class="cta-subtitle">Join thousands of successful professionals who built their future with Growth.ai</p>
+                
+                <div class="cta-buttons">
+                    <a href="https://docs.google.com/forms/d/13Twi4DWi0eWLkFk-nZxVNN88C8051LwKuzotxxBcsIM/edit" class="cta-button cta-primary">START WITH DATA ANALYTICS</a>
+                    <a href="https://docs.google.com/forms/d/13Twi4DWi0eWLkFk-nZxVNN88C8051LwKuzotxxBcsIM/edit" class="cta-button cta-secondary">MASTER AI & AGENTS</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="section">
+            <h2 class="section-title">GET IN TOUCH</h2>
+            
+            <div class="contact-grid">
+                
+                
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <div class="contact-title">LinkedIn</div>
+
+                    <a href="https://www.growthai.it.com/" class="contact-link">Growth.ai</a>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">💬</div>
+                    <div class="contact-title">Message</div>
+ 			<a href="https://wa.me/919566176193" class="contact-link">Direct message us</a>
+                 
+                </div>
+            </div>
+            
+            <div style="text-align: center; margin-top: 60px; padding: 40px; background: rgba(255, 255, 255, 0.1); border-radius: 20px; backdrop-filter: blur(10px);">
+                <h3 style="font-size: 2rem; margin-bottom: 20px; background: linear-gradient(45deg, #1d4eff, #ff1d84); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; font-weight: 800;">
+                    YOUR DATA ANALYTICS FUTURE STARTS HERE
+                </h3>
+                <p style="font-size: 1.2rem; opacity: 0.9;">
+                    Join the Growth.ai community and transform your career with cutting-edge data analytics skills.
+                </p>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
