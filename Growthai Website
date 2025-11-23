@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>Growth AI - Land Your Dream AI Job or AI powered business in 30 Days</title>
+
+  <!-- SEO Meta Tags -->
+  <meta name="description" content="Growth AI  helps Doctors, Graduates & Career Switchers land AI & Data jobs in 30 days. Learn Healthcare AI, Data Analytics, Generative AI, LLMs, RAG, AI Agents & build a Industry-ready portfolio.">
+  <meta name="keywords" content="AI jobs, Healthcare AI, Data Analytics, Growth AI Academy, AI for doctors, AI career transition, AI courses India, Generative AI training, RAG agentic workflows, AI agents, LLMs, career switch to AI">
+  <meta name="author" content="Growth AI">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:title" content="Growth AI - Land Your Dream AI Job or AI powered business in 30 Days">
+  <meta property="og:description" content="Upskill with India's most practical AI & Data Academy. Master Healthcare AI, LLMs, RAG Agentic AI & Multi-Agent Systems – no tech background required.">
+  <meta property="og:image" content="https://sumishans.github.io/growth-ai-site/og-image.jpg">
+  <meta property="og:url" content="https://sumishans.github.io/growth-ai-site/">
+  <meta property="og:type" content="website">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Growth AI  - Land Your Dream AI Job  or AI powered business in 30 Days">
+  <meta name="twitter:description" content="Land jobs, freelance projects, or promotions in AI & Data within 30-60 days. Learn AI hands-on with Growth AI Academy.">
+  <meta name="twitter:image" content="https://sumishans.github.io/growth-ai-site/og-image.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://sumishans.github.io/growth-ai-site/favicon.png">
+
+  <!-- Fonts & Styles -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap');
+  </style>
+</head>
+
+
+<html lang="en">
+<head>
+  meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0"> <title>Growth AI - Land Your Dream AI Job in 30 Days</title> <style> @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&display=swap'); *{margin:0;padding:0;box-sizing:border-box;} body{font-family:'Inter',sans-serif;line-height:1.6;color:#fff;background:#000;overflow-x:hidden;} html{scroll-behavior:smooth;} .container{max-width:1200px;margin:0 auto;padding:0 20px;}
+
+    /* Header */
+    header {
+      background: rgba(15,15,35,0.9);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+      position: fixed; width:100%; top:0; z-index:1000;
+    }
+    nav{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;}
+    .logo{font-size:1.6rem;font-weight:900;background:linear-gradient(45deg,#1d4eff,#ff1d84);-webkit-background-clip:text;-webkit-text-fill-color:transparent;}
+    .nav-links{display:flex;list-style:none;gap:2rem;}
+    .nav-links a{text-decoration:none;color:#fff;transition:0.3s;font-weight:600;}
+    .nav-links a:hover{color:#1d4eff;}
+
+    /* Hero Section */
+    .hero {
+      min-height:100vh;
+      display:flex;align-items:center;justify-content:center;text-align:center;flex-direction:column;
+      background: radial-gradient(circle at 20% 80%, rgba(29,78,255,0.3) 0%, transparent 50%),
+                  radial-gradient(circle at 80% 20%, rgba(255,29,132,0.3) 0%, transparent 50%),
+                  linear-gradient(135deg,#0f0f23 0%,#16213e 100%);
+      padding:160px 20px 100px;
+    }
+    .hero h1{
+      font-size:clamp(2.5rem,6vw,4rem);
+      font-weight:900;
+      margin-bottom:1rem;
+      background:linear-gradient(135deg,#fff,#1d4eff,#ff1d84);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    }
+    .hero p{font-size:1.3rem;opacity:0.9;margin-bottom:2rem;}
+
+    .cta-buttons{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center;margin-bottom:2rem;}
+    .btn{
+      padding:15px 30px;border:none;border-radius:15px;font-size:1rem;font-weight:700;
+      text-decoration:none;cursor:pointer;transition:all 0.3s ease;
+    }
+    .btn-primary{
+      background:linear-gradient(45deg,#1d4eff,#ff1d84);color:#fff;
+    }
+    .btn-primary:hover{transform:translateY(-3px);box-shadow:0 10px 20px rgba(29,78,255,0.4);}
+    .btn-secondary{
+      border:2px solid #fff;background:transparent;color:#fff;
+    }
+    .btn-secondary:hover{background:#fff;color:#16213e;}
+
+    .trust-markers{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;opacity:0.9;margin-top:2rem;}
+
+ .section-title{font-size:clamp(2.5rem,5vw,4rem);font-weight:800;text-align:center;margin-bottom:60px;background: linear-gradient(135deg,#fff,#1d4eff,#ff1d84);-webkit-background-clip:text;-webkit-text-fill-color:transparent; background-clip:text;}
+    /* Main */
+    .main-content{padding:80px 0;background:#0f0f23;}
+    .section{margin-bottom:80px;}
+    .section h2{
+      font-size:2.5rem;text-align:center;margin-bottom:3rem;
+      background:linear-gradient(135deg,#fff,#1d4eff,#ff1d84);
+      -webkit-background-clip:text;-webkit-text-fill-color:transparent;
+    }
+
+    /* Programs */
+    .programs-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;}
+    .program-card{
+      background:rgba(255,255,255,0.08);backdrop-filter:blur(15px);
+      border:1px solid rgba(255,255,255,0.2);
+      padding:2rem;border-radius:20px;transition:all 0.3s ease;
+    }
+    .program-card:hover{transform:translateY(-8px);border-color:#1d4eff;box-shadow:0 20px 40px rgba(29,78,255,0.3);}
+    .program-card h3{color:#ff1d84;margin-bottom:1rem;}
+    .program-card li{margin:0.5rem 0;position:relative;padding-left:25px;}
+    .program-card li::before{content:"✓";position:absolute;left:0;color:#00ff88;font-weight:bold;}
+	.program-badge{position:absolute; top:-15px; left:30px; background: linear-gradient(45deg,#1d4eff,#ff1d84); padding:10px 20px; border-radius:50px; font-		weight:700; text-transform:uppercase; letter-spacing:1px; font-size:0.8rem;}
+        .program-title{font-size:2rem; font-weight:800; margin:20px 0 15px 0; color:#ff1d84;}
+
+    /* Steps */
+    .steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;}
+    .step{
+      background:linear-gradient(135deg,#1d4eff,#ff1d84);padding:2rem;border-radius:15px;text-align:center;color:#fff;
+    }
+    .step-number{font-size:3rem;font-weight:900;margin-bottom:1rem;opacity:0.8;}
+
+    /* Success Stories */
+    .success-stories{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;}
+    .success-card{background:rgba(255,255,255,0.08);padding:2rem;border-radius:15px;}
+    .success-card h4{color:#1d4eff;margin-bottom:1rem;}
+
+
+    /* Webinar */
+    .webinar{padding:3rem;border-radius:20px;text-align:center;color:#fff;
+      background:linear-gradient(135deg,#1d4eff,#ff1d84);}
+    .webinar h3{font-size:2rem;margin-bottom:1rem;}
+
+    /* Target Audience */
+    .target-audience{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;}
+    .audience-card{background:rgba(255,255,255,0.08);padding:2rem;border-radius:15px;text-align:center;transition:0.3s;}
+    .audience-card:hover{transform:translateY(-5px);}
+    .audience-icon{font-size:3rem;margin-bottom:1rem;}
+
+   /* Stats Section */
+    .stats-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem;text-align:center;}
+    .stat-box{background:rgba(255,255,255,0.08);padding:1.5rem;border-radius:12px;}
+    .stat-box strong{display:block;font-size:1.5rem;color:#facc15;margin-bottom:0.5rem;}
+
+
+    /* FAQ */
+    .faq-item{margin-bottom:1rem;border-radius:10px;overflow:hidden;background:rgba(255,255,255,0.05);}
+    .faq-question{background:linear-gradient(45deg,#1d4eff,#ff1d84);color:#fff;padding:1.5rem;font-weight:700;cursor:pointer;}
+    .faq-answer{padding:1.5rem;display:none;color:#ddd;}
+    .faq-item.active .faq-answer{display:block;}
+
+    /* Founder */
+    .founder-section{background:linear-gradient(135deg,#0f0f23,#16213e);padding:3rem;border-radius:20px;text-align:center;}
+    .achievement{background:rgba(255,255,255,0.08);padding:1rem;border-radius:10px;margin:0.5rem;display:inline-block;}
+
+    /* CTA */
+    .final-cta{padding:4rem 0;text-align:center;background:linear-gradient(135deg,#1d4eff,#ff1d84);}
+    .final-cta h2{color:#fff;margin-bottom:2rem;}
+    .cta-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;margin-top:2rem;}
+    .cta-card{background:rgba(0,0,0,0.3);padding:2rem;border-radius:15px;}
+
+    /* Footer */
+    footer{background:#000;color:#fff;padding:3rem 0;text-align:center;}
+    .footer-links{display:flex;flex-wrap:wrap;gap:2rem;justify-content:center;margin-bottom:2rem;}
+    .footer-links a{color:#fff;transition:0.3s;}
+    .footer-links a:hover{color:#1d4eff;}
+
+    @media(max-width:768px){
+      .hero h1{font-size:2rem;}
+      .nav-links{display:none;}
+    }
+
+    /* Unified Hover Effects for All Cards/Divs */
+.program-card,
+.week-card,
+.stat-box,
+.success-card,
+.step,
+.audience-card,
+.faq-item,
+.founder-section,
+.cta-card {
+  transition: all 0.3s ease;
+}
+
+.program-card:hover,
+.week-card:hover,
+.stat-box:hover,
+.success-card:hover,
+.step:hover,
+.audience-card:hover,
+.faq-item:hover,
+.founder-section:hover,
+.cta-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(29,78,255,0.8);
+  box-shadow: 0 20px 40px rgba(29,78,255,0.3);
+  background: rgba(255,255,255,0.08);
+}
+
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <nav class="container">
+      <div class="logo">Growth AI</div>
+      <ul class="nav-links">
+ 	<li><a href="#startup">StartUp help</a></li>
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#success-stories">Success Stories</a></li>
+        <li><a href="#webinar">Webinar</a></li>
+        <li><a href="#about">About</a></li>
+ 	<li><a href="#contact">Enroll</a></li>
+        <li><a href="#contact">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+<div class="tribe-highlight">
+   <p>Join the HealthcareAI Cub's Tribe  <p > More than a course, it’s a Movement!</p>
+</div>
+      <h1>Land Your Dream AI Job or Launch a AI-Powered Business in 30 Days
+</h1>
+ 
+      <p>Practical AI & Data Training Designed for Doctors, Non-Tech, Career Switchers and Businesses</p>
+    
+      <div class="cta-buttons">
+
+  <a href="https://pages.razorpay.com/stores/st_RBtLxvzbCl58A4" target="_blank" class="btn btn-primary">🎯Enroll now</a>
+        <a href="https://healthcare-ai-expert-lteoanr.gamma.site/" class="btn btn-secondary"> Get your Roadmap</a>
+      </div>
+      <div class="trust-markers">
+        <span>✅ Trusted by 800+ Students</span>
+        <span>🎯 Unlimited Placement Assistance</span>
+        <span>💼 100% Industry-Aligned Projects</span>
+      </div>
+    </div>
+
+</div>
+      <div class="post course">
+        <span>✅ Live Doubt clarification sessions</span>
+        <span>🤝 Referrals  provided</span>
+        <span>🌱 Post-Course Mentorship</span>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- MAIN -->
+  <main class="main-content">
+    <div class="container">
+
+     <section id="benefits" class="section">
+    <h2>Benefits of Healthcare AI</h2>
+    <div class="steps">
+        <div class="step">
+            <h3> Clinical Excellence ⚕️</h3>
+            <p>Diagnose faster, reduce errors, and deliver better patient experiences.</p>
+        </div>
+
+        <div class="step">
+            <h3>Career Growth 📚 </h3>
+            <p>Stay Relevant as AI becomes essential in Medicine.</p>
+        </div>
+
+        <div class="step">
+            <h3>Patient & Brand Impact 🌍 </h3>
+            <p>Build trust, attract patients, and stand out from the competition.</p>
+        </div>
+    </div>
+
+<div style="display: flex; justify-content: center; margin-top: 20px;">
+        <a href="https://pages.razorpay.com/stores/st_RBtLxvzbCl58A4" 
+           target="_blank" 
+           class="btn btn-primary">
+             Future-Proof Your Career
+        </a>
+    </div>
+</section>
+
+<!-- Top Job Roles -->
+<section class="section">
+  <h2> Top 4 Job Roles After Healthcare AI & Data </h2>
+  <div class="stats-grid">
+    <div class="stat-box"><strong>Healthcare Data Scientist</strong><br> Predictive models & Advanced analytics for patient care</div>
+    <div class="stat-box"><strong>Clinical AI/ML Engineer</strong><br> Build AI tools for Diagnostics, Imaging & Genomics</div>
+    <div class="stat-box"><strong>AI Healthcare Consultant</strong><br> Guide AI adoption, Compliance & Workflow integration</div>
+    <div class="stat-box"><strong>Freelance AI Solutions Developer</strong><br> Earn $10K+ per project building Healthcare AI apps</div>
+  </div>
+  <div style="display: flex; justify-content: center; margin-top: 20px;">
+    <a href="https://pages.razorpay.com/stores/st_RBtLxvzbCl58A4" 
+       target="_blank" 
+       class="btn btn-primary">
+        Land Your Dream AI Job
+    </a>
+  </div>
+
+      </section>
+
+ <!-- AI Revolution -->
+<section class="section">
+        <h2> The AI Revolution in Healthcare</h2>
+        <div class="stats-grid">
+          <div class="stat-box"><strong>$200B+</strong> Healthcare AI Market by 2030</div>
+          <div class="stat-box"><strong>400%</strong> AI Job Demand Rise in Healthcare</div>
+          <div class="stat-box"><strong>$10K+</strong> Freelance Earnings per AI Project</div>
+          <div class="stat-box"><strong>90%</strong> Healthcare Institutions Adopting AI by 2027</div>
+        </div>
+<div style="display: flex; justify-content: center; margin-top: 20px;">
+        <a href="https://pages.razorpay.com/stores/st_RBtLxvzbCl58A4" 
+           target="_blank" 
+           class="btn btn-primary">
+             Start Your AI Journey
+        </a>
+    </div>
+
+      </section>
+      <!-- Programs -->
+      <section id="programs" class="section">
+        <h2> Programs We Offer</h2>
+   
+
+ 
+        <div class="programs-grid">
+
+          <div class="program-card">
+	<div class="program-badge">Foundation</div>
+            <h3>🔹 Fellowship in Healthcare Data Analytics </h3>
+            <ul>
+              <li>Math & Stats Fundamentals for Data Analysis</li>
+              <li>Advanced Excel with Clinical Data Analysis</li>
+              <li>Power BI & Business Intelligence for Healthcare</li>
+              <li>Python for Advanced Healthcare Data Analysis</li>
+              <li>Final Project & Portfolio Review</li>
+            </ul>
+          </div>
+          <div class="program-card">
+	<div class="program-badge">Advanced</div>
+            <h3>🔹 Fellowship in Healthcare AI </h3>
+            <ul>
+                <li>Prompt Engineering for Healthcare Applications</li>
+                <li>RAG Agentic Workflow Workshop (Medical Knowledge Systems)</li>  
+                <li>AI Agent Development for Healthcare Automation</li>
+                <li>Cloud Configuration for Healthcare AI Deployments</li>
+                <li>Portfolio + LinkedIn Optimization (Healthcare AI Career Focus)</li>
+                <li>Capstone Projects & Monetization Strategies</li>
+            </ul>
+          </div>
+ 		
+          <div class="program-card">
+	  <div class="program-badge">Full course</div>
+            <h3>🔹 Fellowship in Data Analytics and Healthcare AI </h3>
+		(Individual certificate courses are available in)
+            <ul>
+              <li>Advanced Excel with Clinical Data Analysis</li>
+              <li>Power BI & Business Intelligence for Healthcare</li>
+              <li>Python for Advanced Healthcare Data Analysis</li>
+              <li>Prompt Engineering for Healthcare Applications</li>
+              <li>RAG Agentic Workflow Workshop (Medical Knowledge Systems)</li>
+              <li>AI Agent Development for Healthcare Automation</li>
+              <li>Cloud Configuration for Healthcare AI Deployments</li>
+              <li>Portfolio + LinkedIn Optimization (Healthcare AI Career Focus)</li>
+            </ul>
+          </div>
+        </div>
+
+      </section>
+<div style="display: flex; justify-content: center; margin-bottom: 50px;">
+  <a href="https://pages.razorpay.com/stores/st_RBtLxvzbCl58A4" 
+     target="_blank" 
+     class="btn btn-primary">
+    🎯Enroll now
+  </a>
+</div>
+
+
+<section class="section" style="margin-top: 60px; text-align: center;">
+  <h2>Companies Hiring?</h2>
+  <div class="logo-slider" style="overflow: hidden; white-space: nowrap; margin-top: 30px; position: relative;">
+    <div class="logo-track" style="display: inline-block; animation: scroll 25s linear infinite;">
+
+      <!-- Big Tech -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" style="height: 60px; margin: 0 40px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" style="height: 60px; margin: 0 40px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" style="height: 60px; margin: 0 40px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="Apple" style="height: 60px; margin: 0 40px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg" alt="IBM" style="height: 60px; margin: 0 40px;">
+
+      <!-- Duplicate for seamless loop -->
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/44/Microsoft_logo.svg" alt="Microsoft" style="height: 60px; margin: 0 40px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Google_2015_logo.svg" alt="Google" style="height: 60px; margin: 0 40px;">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg" alt="Amazon" style="height: 60px; margin: 0 40px;">
+    </div>
+  </div>
+</section>
+<style>
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+</style>
+
+
+      <!-- Steps -->
+      <section class="section">
+
+        <h2>How It Works</h2>
+        <div class="steps">
+          <div class="step"><div class="step-number">1</div><h3>Enroll Now </h3><p>Get Personalized Guidance</p></div>
+          <div class="step"><div class="step-number">2</div><h3>GrowthAI </h3><p>Start your Transformation Journey</p></div>
+          <div class="step"><div class="step-number">3</div><h3>Build Your AI Career</h3><p>Land your Dream Job</p></div>
+        </div>
+      </section>
+
+      <!-- Success Stories -->
+      <section id="Success-stories" class="section">
+        <h2>Success Stories</h2>
+        <div class="success-stories">
+
+<div class="success-card">
+  <h4 style="color:#4da6ff;">
+    🚀 Dr. Devanshu.P, MBBS → Freelance AI Consultant ( 6 weeks)
+  </h4>
+  <blockquote>
+    "This program changed my life. I never thought I'd understand AI without coding."
+  </blockquote>
+</div>
+<div class="success-card">
+  <h4 style="color:#4da6ff;">
+    💼 Manoj, Bcom Grad → BI Analyst at Top MNC
+  </h4>
+  <blockquote>
+    "Resume Reviews, Mock Interviews, and Real Guidance. Totally Worth it."
+  </blockquote>
+</div>
+
+        </div>
+        <div style="text-align:center;margin-top:2rem;"><a href="#contact" class="btn btn-primary">📖 View More Success Stories</a></div>
+      </section>
+
+      <!-- Webinar -->
+      <section id="webinar" class="section">
+        <div class="webinar">
+          <h3> Next Webinar</h3>
+          <p>Topic: "How to Land a Job in AI Without Coding"</p>
+   <p>          👩‍⚕️   </p>
+          <a href="#contact" class="btn btn-primary">🎟️ Reserve My Seat</a>
+        </div>
+      </section>
+
+
+
+
+      <!-- Audience -->
+      <section class="section">
+        <h2> Who This Is For</h2>
+        <div class="target-audience">
+          <div class="audience-card"><div class="audience-icon">👩‍⚕️</div><h4>Doctors</h4><p>Shifting to Digital Roles</p></div>
+          <div class="audience-card"><div class="audience-icon">👨‍🎓</div><h4>Graduates</h4><p>With No clear Direction</p></div>
+          <div class="audience-card"><div class="audience-icon">🧑‍💼</div><h4>Career Switchers</h4><p>From any Background</p></div>
+          <div class="audience-card"><div class="audience-icon">👩‍💻</div><h4>Freelancers</h4><p>Stuck in Low-paying work</p></div>
+        </div>
+      </section>
+      
+  	<!-- Outcomes -->
+      <section  class="section">
+        <h2> Success Outcomes</h2>
+        <div class="stats-grid">
+          <div class="stat-box">Portfolio-ready Healthcare AI Projects</div>
+          <div class="stat-box">Mastery of RAG, LLMs & Multi-Agent Systems</div>
+          <div class="stat-box">Freelancing & Consulting Opportunities</div>
+          <div class="stat-box">Career Transition Support</div>
+          <div class="stat-box">Lifetime Access to AI Community</div>
+        </div> 
+    
+      </section>
+
+
+	
+
+      <!-- FAQ -->
+      <section class="section">
+        <h2> Frequently Asked Questions</h2>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Q: Do I need to know Coding?</div><div class="faq-answer">A: No, our foundation batch is designed for Complete Beginners.</div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Q: Will I get a Job after this?</div><div class="faq-answer">A: If you complete your Projects and take part in calls, you'll be ready for Freelance or Full-time roles.</div></div>
+        <div class="faq-item"><div class="faq-question" onclick="toggleFAQ(this)">Q: How is this different from YouTube videos?</div><div class="faq-answer">A: Live Mentoring, Real Project Reviews, Job-based Outcomes, and Personalized Guidance.</div></div>
+      </section>
+
+ <section id="startup" class="section">
+    <h2>Do you own a Business or Startup?</h2>
+    <div class="steps">
+<div class="step"><h3>AI-Powered Solutions</h3><p>Streamline operations, increase efficiency, drive profitability.</p> </div>
+      
+    <div class="step"><h3>Healthcare AI</h3> <p>Revolutionize diagnostics and patient care.</p> </div>
+  
+<div class="step"><h3>Automation at Scale</h3> <p>Automate processes and scale effortlessly.</p> </div>
+</div>
+    
+  </div>
+ <!-- CTA Button -->
+  <div style="display: flex; justify-content: center; margin-top: 40px; margin-bottom: 50px;">
+    <a href="https://pages.razorpay.com/stores/st_RBtLxvzbCl58A4" 
+       target="_blank" 
+       class="btn btn-primary"
+       style="padding: 15px 30px; font-size: 1.1rem; border-radius: 8px;">
+       Let's Scale Your Biz🚀
+    </a>
+  </div>
+</section>
+
+        
+    
+</section>    
+ <!-- Founder -->
+      <section id="about" class="section">
+        <div class="founder-section">
+          <h3>👩‍🏫 About the Course Director – Dr. Kariena David</h3>
+          <p>From Dentist → AI & Healthcare Consultant. Built GrowthAI to cultivate the culture of Healthcare AI & Data 
+            <strong></strong>.</p>
+          <div class="achievements">
+            <div class="achievement">🏆 20+ awards in Healthcare AI & Tech</div>
+            <div class="achievement">🎙 Host of "Beyond the White Coat" Webinar series</div>
+            <div class="achievement">🧠 Helped 500+ Professionals Transition to Tech</div>
+          </div>
+          <div style="margin-top:2rem;"><a href="https://www.linkedin.com/in/karienadavid/" target="_blank" class="btn btn-primary">📖 Learn More About Dr. Kariena</a></div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+ <!-- Contact CTA -->
+<section id="contact" class="final-cta">
+  <div class="container">
+    <h2>Let's join the HealthcareAI Cub Tribe!</h2>
+
+    <div class="cta-wrap">
+      <!-- Get Roadmap -->
+       <a class="cta-card" href="https://pages.razorpay.com/stores/st_RBtLxvzbCl58A4" target="_blank" rel="noopener">
+    
+        <div class="cta-title">Join the Next Webinar</div>
+        <div class="cta-sub">Perfect for Beginners</div>
+        <div class="cta-action">🎟️ Reserve Seat</div>
+      </a>
+
+      <!-- Join the course -->
+      <a class="cta-card" href="https://pages.razorpay.com/stores/st_RBtLxvzbCl58A4" target="_blank" rel="noopener">
+     
+        <div class="cta-title">Join the Course </div>
+        <div class="cta-sub">Healthcare Data & AI </div>
+        <div class="cta-action">📋 Enroll Now</div>
+      </a>
+ <!-- Join the Workshop-->
+      <a class="cta-card" href="https://pages.razorpay.com/stores/st_RBtLxvzbCl58A4" target="_blank" rel="noopener">
+ 
+        <div class="cta-title">Join the Workshop </div>
+        <div class="cta-sub">Weekend Masterclass</div>
+        <div class="cta-action">📋 Enroll Now</div>
+      </a>
+
+ <a class="cta-card" href="https://pages.razorpay.com/stores/st_RBtLxvzbCl58A4" target="_blank" rel="noopener">
+       
+        <div class="cta-title">Book a call for Business Help </div>
+        <div class="cta-sub">Accelerated Growth Installations</div>
+        <div class="cta-action">📋 Work with us</div>
+      </a>
+
+
+      <!-- WhatsApp Support -->
+      <a class="cta-card" href="https://wa.me/918807043740" target="_blank" rel="noopener">
+        
+        <div class="cta-title">WhatsApp Support</div>
+        <div class="cta-sub">Got questions? </div>
+        <div class="cta-action">💬 Chat Now</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .final-cta {
+    padding:4rem 0;
+    text-align:center;
+    background:linear-gradient(135deg,#1d4eff,#ff1d84);
+  }
+  .final-cta h2 { color:#fff; margin-bottom:1rem; }
+  .final-cta p { color:#fff; opacity:0.9; margin-bottom:2rem; }
+
+  .cta-wrap {
+    display:flex;
+    flex-wrap:wrap;
+    gap:20px;
+    justify-content:center;
+  }
+  .cta-card {
+    flex:1 1 280px;
+    max-width:320px;
+    background:rgba(0,0,0,0.3);
+    padding:2rem;
+    border-radius:16px;
+    text-decoration:none;
+    color:#fff;
+    display:flex;
+    flex-direction:column;
+    gap:6px;
+    transition:transform .2s ease, box-shadow .2s ease;
+  }
+  .cta-card:hover {
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.35);
+  }
+  .cta-emoji { font-size:26px; }
+  .cta-title { font-weight:700; font-size:1.1rem; }
+  .cta-sub { font-size:0.9rem; color:#e0e0e0; }
+  .cta-action {
+    margin-top:10px;
+    font-weight:700;
+    color:#1dffb3;
+  }
+
+  @media(max-width:600px){
+    .cta-card{ flex:1 1 100%; max-width:100%; }
+  }
+</style>
+
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <div class="footer-links">
+        <a href="https://sumishans.github.io/growth-ai-site/terms_conditions.html" target="_blank" rel="noopener noreferrer">Terms & Conditions</a>
+        <a href="https://sumishans.github.io/growth-ai-site/privacy_policy.html" target="_blank" rel="noopener noreferrer">Privacy Policy</a>
+        <a href="https://sumishans.github.io/growth-ai-site/refund_policy.html" target="_blank" rel="noopener noreferrer">Refund Policy</a>
+        <a href="mailto:growthaiacademy@gmail.com">Contact Us</a>
+      </div>
+      <p>&copy; 2025 GrowthAI. All rights reserved.</p>
+      <p style="margin-top:1rem;opacity:0.8;">Empowering Professionals Worldwide to Build Successful Careers in Healthcare AI</p>
+    </div>
+  </footer>
+
+  <script>
+    // FAQ Toggle
+    function toggleFAQ(el){
+      const item=el.parentElement;
+      const isActive=item.classList.contains('active');
+      document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('active'));
+      if(!isActive){item.classList.add('active');}
+    }
+
+    // Header scroll effect
+    window.addEventListener('scroll',()=>{
+      const header=document.querySelector('header');
+      if(window.scrollY>100){header.style.background='rgba(15,15,35,0.98)';}
+      else{header.style.background='rgba(15,15,35,0.9)';}
+    });
+  </script>
+</body>
+</html>
+
+
+
