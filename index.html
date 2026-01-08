@@ -135,6 +135,7 @@
       text-decoration: none;
       cursor: pointer;
       transition: all 0.3s ease;
+      display: inline-block;
     }
     
     .btn-primary {
@@ -297,6 +298,12 @@
       border-radius: 10px;
       overflow: hidden;
       background: rgba(255,255,255,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .faq-item:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 10px 20px rgba(29,78,255,0.2);
     }
     
     .faq-question {
@@ -375,7 +382,7 @@
         <li><a href="#industries">Industries</a></li>
         <li><a href="#why-choose">Why Choose Us</a></li>
         <li><a href="#faq">FAQ</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="mailto:growthaiacademy@gmail.com">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -387,7 +394,7 @@
       <p>Deliver smarter care, streamline operations, and drive growth with GrowthAI's intelligent solutions.</p>
       
       <div class="cta-buttons">
-        <a href="https://calendly.com/growthaiacademy/30min" target="_blank" class="btn btn-primary">Schedule a Demo</a>
+        <a href="https://calendly.com/growthaiacademy/30min" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Schedule a Demo</a>
         <a href="#services" class="btn btn-secondary">Get Started</a>
       </div>
       
@@ -570,15 +577,15 @@
   </main>
 
   <!-- Final CTA -->
-  <section id="contact" class="final-cta">
+  <section class="final-cta">
     <div class="container">
       <h2>Ready to Transform Your Healthcare Organization?</h2>
       <p style="color: #fff; opacity: 0.9; margin-bottom: 2rem;">
         Let's discuss how GrowthAI can help you deliver smarter care and achieve operational excellence.
       </p>
       <div class="cta-buttons">
-        <a href="https://calendly.com/growthaiacademy/30min" target="_blank" class="btn btn-secondary">Schedule a Demo</a>
-        <a href="#" class="btn btn-secondary">Contact Us</a>
+        <a href="https://calendly.com/growthaiacademy/30min" target="_blank" rel="noopener noreferrer" class="btn btn-secondary">Schedule a Demo</a>
+        <a href="mailto:growthaiacademy@gmail.com" class="btn btn-secondary">Contact Us</a>
       </div>
     </div>
   </section>
@@ -587,11 +594,11 @@
   <footer>
     <div class="container">
       <div class="footer-links">
-        <a href="#">Terms & Conditions</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Contact Us</a>
+        <a href="terms.html">Terms & Conditions</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="mailto:growthaiacademy@gmail.com">Contact Us</a>
       </div>
-      <p>&copy; 2026 GrowthAI. All rights reserved.</p>
+      <p>&copy; 2025 GrowthAI. All rights reserved.</p>
       <p style="margin-top: 1rem; opacity: 0.8;">
         Empowering Health & Wellness Organizations with AI Innovation
       </p>
